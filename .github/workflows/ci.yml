@@ -20,5 +20,10 @@ jobs:
           echo '${{ toJSON(github) }}'
       - name: Show content
         run: |
-          cat README.md       
+          cat README.md
+      - run: exit 1
+        continue-on-error: true
+      - name: continue
+        if: failure()
+        run: echo "continue"
 
