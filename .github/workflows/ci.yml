@@ -23,8 +23,8 @@ jobs:
           cat README.md
       - run: exit 1
         continue-on-error: true
-      - name: continue
+      - name: run job if above fails
+        run: echo "continue"      
         if: ${{ failure() }}
-        run: echo "continue"
       - name: next step
         run: echo "again"
