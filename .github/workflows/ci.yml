@@ -23,5 +23,6 @@ jobs:
           cat README.md
       - run: exit 1
       - name: The job has failed
+        run: echo "going"
         if: ${{ failure() }}          
       
