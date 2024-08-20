@@ -25,5 +25,6 @@ jobs:
         continue-on-error: true
       - name: run job if above fails 
         if: ${{ failure() }}
+        run: echo done
       - name: next step
         run: echo "again"
