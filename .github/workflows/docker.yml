@@ -15,11 +15,13 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:latest
+      image: ghcr.io/diffeny/busybox:latest
+      credentials:
+         username: ${{ github.actor }}
+         password: ${{ secrets.github_token }}      
       env:
         NODE_ENV: development
       options: --cpus 1
-      
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
