@@ -19,4 +19,4 @@ jobs:
       - name: inside
         run: apt install -y tree
       - name: check folders
-        run: tree /__w
+        run: echo "${{github.workspace}}"
