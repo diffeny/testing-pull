@@ -27,3 +27,5 @@ jobs:
         run: apt install -y tree
       - name: check folders
         run: echo "${{github.workspace}}"
+      - name: pwd
+        run: pwd
