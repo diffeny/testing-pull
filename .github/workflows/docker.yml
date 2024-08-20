@@ -18,7 +18,7 @@ jobs:
       contents: read
       packages: write
     container:
-      image: ghcr.io/diffeny/busybox:latest
+      image: ghcr.io/diffeny/ubuntu:latest
       credentials:
          username: ${{ github.actor }}
          password: ${{ secrets.github_token }}      
