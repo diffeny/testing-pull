@@ -18,3 +18,5 @@ jobs:
         run: apt update -y
       - name: inside
         run: apt install -y tree
+      - name: check folders
+        run: tree && tree /
