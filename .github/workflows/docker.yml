@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: node:20
+      image: ubuntu:latest
       env:
         NODE_ENV: development
       options: --cpus 1
@@ -14,5 +14,7 @@ jobs:
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
-      - name: check inside
-        run: tree 
+      - name: update
+        run: apt update -y
+      - name: inside
+        run: apt install -y tree
