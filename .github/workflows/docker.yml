@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: read
+      packages: write
     container:
       image: ghcr.io/diffeny/busybox:latest
       credentials:
