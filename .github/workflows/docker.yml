@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - name: update
         run: apt update -y
       - name: inside
