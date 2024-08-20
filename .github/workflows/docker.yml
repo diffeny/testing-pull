@@ -14,6 +14,9 @@ jobs:
         run: ls
   container-test-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
     container:
       image: ghcr.io/diffeny/busybox:latest
       credentials:
