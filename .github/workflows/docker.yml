@@ -16,4 +16,4 @@ jobs:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
       - name: check inside
-        run: ls .
+        run: ls /
