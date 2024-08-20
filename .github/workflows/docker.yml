@@ -28,4 +28,4 @@ jobs:
       - name: check folders
         run: echo "${{github.workspace}}"
       - name: pwd
-        run: pwd && cat README.md
+        run: pwd && ls
